@@ -10,7 +10,7 @@ The .NET Console App template:
 
 - Or command-line:
 
-`dotnet new console --framework net6.0 --use-program-main`
+`dotnet new console --framework net8.0 --use-program-main`
 
 generates a very basic Console App.
 
