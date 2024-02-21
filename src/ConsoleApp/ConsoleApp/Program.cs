@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+// See https://aka.ms/new-console-template for more information
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 using ConsoleApp.Classes;
