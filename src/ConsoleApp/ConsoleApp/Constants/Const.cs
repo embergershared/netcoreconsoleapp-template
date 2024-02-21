@@ -1,4 +1,4 @@
-namespace ListenerAPI.Constants
+namespace ConsoleApp.Constants
 {
     public static class Const
     {
