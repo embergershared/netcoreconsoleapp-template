@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using ConsoleApp.Interfaces;
 using static System.Console;
 
@@ -21,7 +22,7 @@ namespace ConsoleApp.Classes
 
         private readonly string _nl = Environment.NewLine;
         
-        public void Show()
+        public Task Show()
         {
 
             WriteLine(
@@ -79,9 +80,11 @@ namespace ConsoleApp.Classes
             WriteLine("{0,-20} {1}", "Privileged processor time", Process.GetCurrentProcess().PrivilegedProcessorTime);
             WriteLine("{0,-20} {1}", "Total processor time", Process.GetCurrentProcess().TotalProcessorTime);
             WriteLine();
+
+            return Task.CompletedTask;
         }
 
-        string GetInBestUnit(long size)
+        private static string GetInBestUnit(long size)
         {
             if (size < Mega)
             {
@@ -94,7 +97,7 @@ namespace ConsoleApp.Classes
             }
             else
             {
-                double gigabytes = size / Giga;
+                var gigabytes = size / Giga;
                 return $"{gigabytes:F} GiB";
             }
         }

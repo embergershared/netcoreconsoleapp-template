@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using static System.Console;
 
-
 namespace ConsoleApp.Classes
 {
     internal class Console : IConsole
@@ -31,7 +30,7 @@ namespace ConsoleApp.Classes
                 _logger.LogTrace("Method start");
 
                 _logger.LogDebug("Launching showInfos.Show()");
-                _showInfos.Show();
+                await _showInfos.Show();
                 _logger.LogDebug("Exited showInfos.Show()");
 
                 // await DoSomethingAsync()
